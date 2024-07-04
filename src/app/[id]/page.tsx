@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Pokédex - Pokemon Detail",
@@ -59,6 +60,9 @@ const PokemonDetail = async ({ params }: { params: { id: string } }) => {
             </li>
           ))}
         </ul>
+        <Link href="/" className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+          뒤로가기
+        </Link>
       </div>
     </div>
   );
